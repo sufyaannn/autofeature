@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sufyaan-autofeature"
+version = "0.1.0"
+description = "Intelligent automatic feature engineering for tabular ML — interaction detection, target-aware selection, smart encoding, and leakage detection."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Sufyaan", email = "sufyaanmd182@gmail.com" }
+]
+keywords = [
+    "machine-learning",
+    "feature-engineering",
+    "tabular-data",
+    "scikit-learn",
+    "data-science",
+    "feature-selection",
+    "interaction-features",
+    "target-encoding",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+    "scikit-learn>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/sufyaannn/autofeature"
+Repository = "https://github.com/sufyaannn/autofeature"
+"Bug Tracker" = "https://github.com/sufyaannn/autofeature/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=autofeature --cov-report=term-missing"
